@@ -4,9 +4,9 @@ The `lasrc` portion of the  processing code requires [auxiliary data](https://gi
 ```shell
 $ docker build --tag lasrc_aux_download ./download_aux
 ```
-You can then tags this `lasrc_aux_download` image as `552819999234.dkr.ecr.us-east-1.amazonaws.com/lasrc_aux_download` and push it to ECR.
+You can then tag this `lasrc_aux_download` image as `552819999234.dkr.ecr.us-east-1.amazonaws.com/lasrc_aux_download` and push it to ECR.
 
-The `lasrc` auxiliary data also requires [periodic updates](https://github.com/developmentseed/espa-surface-reflectance/tree/master/lasrc#auxiliary-data-updates) to run these updates as a task you must first obtain an app key with the instructions [here](https://ladsweb.modaps.eosdis.nasa.gov/tools-and-services/data-download-scripts/#appkeys).
+The `lasrc` auxiliary data also requires [periodic updates](https://github.com/developmentseed/espa-surface-reflectance/tree/master/lasrc#auxiliary-data-updates). To run these updates as a task you must first obtain an app key with the instructions [here](https://ladsweb.modaps.eosdis.nasa.gov/tools-and-services/data-download-scripts/#appkeys).
 
 To build the image contaning the scripts for updating this data on a shared EFS mount point run
 
@@ -14,6 +14,8 @@ To build the image contaning the scripts for updating this data on a shared EFS 
 $ docker build --tag lasrc_aux_update ./update_aux
 ```
 You can then tag this `lasrc_aux_update` image as `552819999234.dkr.ecr.us-east-1.amazonaws.com/lasrc_aux_update` and push it to ECR.
+
+After building and tagging the images, follow the steps outlined [here]https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_AWSCLI.html) to push them to ECR.
 
 To run these tasks on the ECS cluster where the task defintions were deployed ...
 

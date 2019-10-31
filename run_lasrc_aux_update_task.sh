@@ -3,7 +3,7 @@ stack=$1
 cluster=$(aws cloudformation describe-stacks --stack-name "$stack" \
 --query "Stacks[0].Outputs[?OutputKey=='ClusterName'].OutputValue" --output text)
 task=$(aws cloudformation describe-stacks --stack-name "$stack" \
---query "Stacks[0].Outputs[?OutputKey=='LaSRCTaskDefinitionArn'].OutputValue" --output text)
+--query "Stacks[0].Outputs[?OutputKey=='LasrcAuxUpdateTaskDefinitionArn'].OutputValue" --output text)
 overrides=$(cat <<EOF
 {
   "containerOverrides": [
