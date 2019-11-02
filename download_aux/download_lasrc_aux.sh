@@ -8,3 +8,5 @@ tar -xvzf MSILUT.tar.gz
 
 wget --no-http-keep-alive http://edclpdsftp.cr.usgs.gov/downloads/auxiliaries/lasrc_auxiliary/L8/CMGDEM.hdf
 
+wget --no-http-keep-alive https://edclpdsftp.cr.usgs.gov/downloads/auxiliaries/lasrc_auxiliary/L8/ratiomapndwiexp.hdf
+
