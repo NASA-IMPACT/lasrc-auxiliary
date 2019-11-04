@@ -9,7 +9,7 @@ You can then tag this `lasrc_aux_download` image as `552819999234.dkr.ecr.us-eas
 The `lasrc` auxiliary data also requires [periodic updates](https://github.com/developmentseed/espa-surface-reflectance/tree/master/lasrc#auxiliary-data-updates). To run these updates as a task you must first obtain an app key with the instructions [here](https://ladsweb.modaps.eosdis.nasa.gov/tools-and-services/data-download-scripts/#appkeys).
 
 Assuming you have a stack deployed following guide in
-[hlslandsat](https://github.com/developmentseed/hlslandsat) but with a cloudformation output `LaSRCAuxDownloadTaskDefinitionArn` you can run:
+[hls-stack](https://github.com/developmentseed/hls-stack) which has a cloudformation output `LaSRCAuxDownloadTaskDefinitionArn` you can run:
 
 ```shell
 ./run_lasrc_aux_download_task.sh yourstackname
