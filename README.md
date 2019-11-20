@@ -1,5 +1,5 @@
 ## lasrc-auxiliary
-The `lasrc` processing code requires [auxiliary data](https://github.com/developmentseed/espa-surface-reflectance/tree/master/lasrc#downloads) to run.  To build the image contaning the scripts for downloading this data to a shared EFS mount point run
+The `lasrc` processing code requires [auxiliary data](https://github.com/developmentseed/espa-surface-reflectance/tree/master/lasrc#downloads) to run.
 This `lasrc` auxiliary data also requires [periodic updates](https://github.com/developmentseed/espa-surface-reflectance/tree/master/lasrc#auxiliary-data-updates) to run.
 
 To build the image contaning the scripts for downloading the base data on a shared EFS mount point run
